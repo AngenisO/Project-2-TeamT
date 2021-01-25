@@ -4,6 +4,7 @@
 .main-header {
    background-color: #ffdfdf;
 }
+
 .main-header,
 .main-nav{
    display: flex;
@@ -36,8 +37,13 @@ ul{
    width: 100%;
    font-size:1.3rem;
    font-weight: 400;
-   margin-bottom: 12px;
+   padding-bottom: 12px;
+   
    text-decoration: none;
+}
+
+.wrapper p {
+   padding: 8px 10px;
 }
 
  a:visited {
@@ -51,11 +57,10 @@ ul{
  .profile-img,
  .content-image { 
     max-width:70%;
-    
-    padding-left:auto;
  }
+
  .profile-img{
-    margin: 0 auto;
+    margin: auto 0;
  }
 
 .contact{
@@ -63,31 +68,31 @@ ul{
    border-bottom: 1px solid rgb(189, 187, 187);
 }
 .contact a{
-   /* padding-bottom:1em; */
-   
    color: #747474;
 }
+
 .contact li {
    padding-bottom: 1em;
+   margin: 0 auto;
 }
 
 .name-bottom {
+   display: flex;
    
-   padding-top: 1rem;
 }
-.name-bottom h2 {
-   float: left;
-   width: 50%;
-}
-.name-bottom a{
-   float: right;
-   width: 50%;
-}
+
+.name-bottom p{
+   margin-left: auto;
+   padding-right:10px;
+} 
 .desktop-nav,
-.btn-name ,
-{
+.btn-name {
    display:none;
-   visibility: hidden;
+ }
+
+ .name-btn {
+    display: inline-block;
+    padding-left: 5px;
  }
 
 /* Clearfix */
@@ -97,27 +102,37 @@ ul{
    display: table;
  }
 
-
-
  /* * Media Queries */
 
  @media(min-width:768px){
    .main-header,
    .main-nav,
    .desktop-nav,
-   .wrapper
+   .wrapper,
+   .intro
    {
       display:flex;
    } 
    .desktop-nav {
-      margin-right: auto;
+      flex-direction: row;
       justify-content: flex-end;
+      margin: auto;
+      align-items: center;
    }
+   .btn-name {
+      display: flex;
+      justify-content: flex-start;
+      align-self: center;
+      padding-top: 10px;
+      padding-left: 5px;
+   }
+
    .main-nav a{
       padding-left:10px;
    }
-    .main-nav li,
-    .desktop-nav li { 
+
+   .main-nav li,
+   .desktop-nav li { 
       display: inline-block; 
    } 
    
@@ -128,9 +143,10 @@ ul{
       align-self: auto;
    }
 
-   .desktop-nav a {
-      
+   .desktop-nav a {/* cant seem to center item */
+      align-self: flex-start;
       margin-left: auto;
+      padding: 10px 5px;
    }
    .wrapper{
       flex-wrap: wrap;
@@ -140,19 +156,15 @@ ul{
       flex: 1 50%;
       flex-direction: column;
     }
-   .intro{
-      display:flex;
-   }
+   
    .intro p{
-      
-      text-align: initial;
-      line-height: 1em;
+      align-self: flex-start;
+      text-align: left;
       padding-left: 2em;
       letter-spacing: 4px;
-      line-height: -6px;
-      
    }
-   .profile-img{
+   
+   .profile-img{ /* cant to make img to the right */
       margin-right: auto;
       padding-bottom: 1em;
       padding-left: 1em;
@@ -160,11 +172,6 @@ ul{
    .content-image{
       max-width: 90%;
    }
-   /* .col{
-      display:inline-block;
-      
-   } */
- 
    
    .name-bottom {
       display: none;
@@ -174,6 +181,7 @@ ul{
  
  @media(min-width:1024px) {
     
+    
    .main-nav {
       margin-right:0;
       margin-left: auto;
@@ -181,13 +189,15 @@ ul{
     }
     .wrapper{
        flex-direction: row;
-       flex: 1 33%;
-       align-self: baseline;
-    }
-    col.{
-       
-       flex: 1 33%;
+       flex-wrap: wrap;
        
     }
+   .col{
+       flex: 1 33%;
+       
+    }
+   .contact {
+      width: 100%;
+   }
     
  }
