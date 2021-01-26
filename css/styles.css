@@ -76,35 +76,23 @@ ul{
    margin: 0 auto;
 }
 
-.name-bottom {
-   display: flex;
-   
+.desktop-nav li { 
+  display: inline-block; 
+} 
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
 }
 
-.name-bottom p{
-   margin-left: auto;
-   padding-right:10px;
-} 
-.desktop-nav,
-.btn-name {
-   display:none;
- }
+.full {
+  display: none;
+}
+/* * Media Queries */
 
- .name-btn {
-    display: inline-block;
-    padding-left: 5px;
- }
-
-/* Clearfix */
-.clearfix::after {
-   content: "";
-   clear: both;
-   display: table;
- }
-
- /* * Media Queries */
-
- @media(min-width:768px){
+@media(min-width:768px){
    .main-header,
    .main-nav,
    .desktop-nav,
@@ -112,92 +100,80 @@ ul{
    .intro
    {
       display:flex;
-   } 
-   .desktop-nav {
-      flex-direction: row;
-      justify-content: flex-end;
-      margin: auto;
-      align-items: center;
    }
-   .btn-name {
-      display: flex;
-      justify-content: flex-start;
-      align-self: center;
-      padding-top: 10px;
-      padding-left: 5px;
-   }
-
+   .main-nav li { 
+      display: inline-block; 
+    } 
+    
    .main-nav a{
       padding-left:10px;
-   }
-
-   .main-nav li,
-   .desktop-nav li { 
-      display: inline-block; 
-   } 
-   
+       }
+    
    .main-nav a {
-      
       justify-content: space-between;
       margin: auto;
       align-self: auto;
-   }
-
-   .desktop-nav a {/* cant seem to center item */
+       }
+    
+   .desktop-nav a {
       align-self: flex-start;
       margin-left: auto;
       padding: 10px 5px;
-   }
+       }
    .wrapper{
       flex-wrap: wrap;
-   }
-   
+       }
+       
    .col{
       flex: 1 50%;
       flex-direction: column;
-    }
-   
+        }
+       
    .intro p{
       align-self: flex-start;
       text-align: left;
       padding-left: 2em;
       letter-spacing: 4px;
-   }
-   
-   .profile-img{ /* cant to make img to the right */
-      margin-right: auto;
+       }
+       
+   .profile-img{ 
       padding-bottom: 1em;
-      padding-left: 1em;
-   }
+      padding-right: 1em;
+       }
    .content-image{
       max-width: 90%;
-   }
+       }
    
-   .name-bottom {
+   .intro {
+      flex-direction: row-reverse;
+       }
+    
+   .top {
       display: none;
+      }
+    
+   .full {
+      display: block;
+      }
    }
-   
- }
- 
- @media(min-width:1024px) {
+@media(min-width:1024px) {
     
     
    .main-nav {
       margin-right:0;
       margin-left: auto;
       padding-right: 1.25em;
-    }
-    .wrapper{
-       flex-direction: row;
-       flex-wrap: wrap;
-       
-    }
+          }
+   .wrapper{
+      flex-direction: row;
+      flex-wrap: wrap;
+             
+          }
    .col{
-       flex: 1 33%;
-       
-    }
+      flex: 1 33%;
+             
+          }
    .contact {
       width: 100%;
+      } 
    }
-    
- }
