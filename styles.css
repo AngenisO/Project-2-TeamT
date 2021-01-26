@@ -1,0 +1,179 @@
+*{
+   box-sizing: border-box;
+ } 
+.main-header {
+   background-color: #ffdfdf;
+}
+
+.main-header,
+.main-nav{
+   display: flex;
+   flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+li
+{
+   color: slategrey;
+   text-align: center;
+}
+h1{
+   font-size: 2em;
+}
+
+ul{
+   list-style-type:none;
+}
+
+.main-header,
+ body {
+   text-align: center;
+   font-family: 'Courier New', Courier, monospace;  
+ } 
+ .main-nav a {
+   display: inline-block;
+   width: 100%;
+   font-size:1.3rem;
+   font-weight: 400;
+   padding-bottom: 12px;
+   
+   text-decoration: none;
+}
+
+.wrapper p {
+   padding: 8px 10px;
+}
+
+ a:visited {
+   color: #5a5a5a;
+ }
+
+.main-nav a:hover {
+   border-bottom: 1px solid #747474 ;
+ }
+
+ .profile-img,
+ .content-image { 
+    max-width:70%;
+ }
+
+ .profile-img{
+    margin: auto 0;
+ }
+
+.contact{
+   background-color:rgb(250, 250, 250);
+   border-bottom: 1px solid rgb(189, 187, 187);
+}
+.contact a{
+   color: #747474;
+}
+
+.contact li {
+   padding-bottom: 1em;
+   margin: 0 auto;
+}
+
+.desktop-nav li { 
+  display: inline-block; 
+} 
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.full {
+  display: none;
+}
+/* * Media Queries */
+
+@media(min-width:768px){
+   .main-header,
+   .main-nav,
+   .desktop-nav,
+   .wrapper,
+   .intro
+   {
+      display:flex;
+   }
+   .main-nav li { 
+      display: inline-block; 
+    } 
+    
+   .main-nav a{
+      padding-left:10px;
+       }
+    
+   .main-nav a {
+      justify-content: space-between;
+      margin: auto;
+      align-self: auto;
+       }
+    
+   .desktop-nav a {
+      align-self: flex-start;
+      margin-left: auto;
+      padding: 10px 5px;
+       }
+   .wrapper{
+      flex-wrap: wrap;
+       }
+       
+   .col{
+      flex: 1 50%;
+      flex-direction: column;
+        }
+       
+   .intro p{
+      align-self: flex-start;
+      text-align: left;
+      padding-left: 2em;
+      letter-spacing: 4px;
+       }
+       
+   .profile-img{ 
+      padding-bottom: 1em;
+      padding-right: 1em;
+       }
+   .content-image{
+      max-width: 90%;
+       }
+   
+   .intro {
+      flex-direction: row-reverse;
+       }
+    
+   .top {
+      display: none;
+      }
+    
+   .full {
+      display: block;
+      }
+   }
+@media(min-width:1024px) {
+    
+    
+   .main-nav {
+      margin-right:0;
+      margin-left: auto;
+      padding-right: 1.25em;
+          }
+   .wrapper{
+      flex-direction: row;
+      flex-wrap: wrap;
+             
+          }
+   .col{
+      flex: 1 33%;
+             
+          }
+   .contact {
+      width: 100%;
+      } 
+   }
